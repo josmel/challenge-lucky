@@ -49,6 +49,10 @@ git clone git@github.com:josmel/challenge-lucky.git
 ```bash
 cd challenge-lucky
 ```
+## Generar .env::
+```bash
+cp .env.example .env
+```
 ## Installation
 ```bash
 $ npm install
@@ -93,6 +97,10 @@ git clone git@github.com:josmel/challenge-lucky.git
 2. Navega hasta el directorio del proyecto::
 ```bash
 cd challenge-lucky
+```
+## Generar .env::
+```bash
+cp .env.example .env
 ```
 
 3. Abre el archivo docker-compose.yml y verifica la configuración de los servicios.

@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_USER: your_username
       POSTGRES_PASSWORD: your_password
-      POSTGRES_DB: your_database_name
+      POSTGRES_DB: challenge_lucky
     ports:
       - '5432:5432'
     volumes:
@@ -36,7 +36,7 @@ services:
     build: .
     depends_on:
       - db
-    command: psql -h db -U your_username -d your_database_name -f /docker-entrypoint-initdb.d/create_tables.sql
+    command: psql -h db -U your_username -d challenge_lucky -f /docker-entrypoint-initdb.d/create_tables.sql
     networks:
       - my-network  # Agrega el servicio a la red personalizada
 
