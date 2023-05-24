@@ -37,12 +37,6 @@ El proyecto se divide en las siguientes carpetas principales:
 * JWT
 
 
-Requisitos Previos
-Asegúrate de tener instalados los siguientes requisitos antes de ejecutar la aplicación:
-
-
-
-
 
 
 ## Pasos de Instalacion Local
