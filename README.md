@@ -111,7 +111,7 @@ docker-compose up -d
 ```
 Esto creará y levantará los contenedores definidos en el archivo docker-compose.yml.
 
-5. Accede a la aplicación en tu navegador en la siguiente URL: http://localhost:3000. Puedes abrir  la documentacion en swagger de las apis en la ruta.
+5. Accede a la aplicación en tu navegador en la siguiente URL: http://localhost:3000/api/v1. Puedes abrir  la documentacion en swagger de las apis en la ruta.
 
 ```bash
 http://localhost:3000/api/v1
