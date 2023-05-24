@@ -32,6 +32,9 @@ El proyecto se divide en las siguientes carpetas principales:
 
 * NestJS: Framework de Node.js para construir aplicaciones escalables y modulares.
 * TypeScript: Lenguaje de programación que agrega tipado estático opcional a JavaScript.
+* Redis
+* Postgres
+* JWT
 
 
 Requisitos Previos
