@@ -5,29 +5,54 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
 
+## Proyecto de Arquitectura Hexagonal
+Este es un proyecto de ejemplo que muestra la implementación de una arquitectura hexagonal en una aplicación.
+
+Descripción
+La arquitectura hexagonal, también conocida como puertos y adaptadores, es un enfoque de diseño de software que busca separar las preocupaciones y lograr una mayor modularidad y flexibilidad en la aplicación.
+
+En este proyecto, seguimos los principios de la arquitectura hexagonal para organizar nuestra aplicación en capas y establecer una clara separación de responsabilidades.
+
+## Estructura del Proyecto
+El proyecto se divide en las siguientes carpetas principales:
+
+* src: Contiene el código fuente de la aplicación.
+* * application: Aquí se encuentran los casos de uso de la aplicación.
+* * domain: Contiene las entidades y objetos de valor del dominio.
+* * infrastructure: Esta carpeta contiene las implementaciones concretas de los puertos definidos en el dominio, así como otros detalles de infraestructura
+* * api: puente de entrada, controladores
+## Tecnologías Utilizadas
+***
+
+* NestJS: Framework de Node.js para construir aplicaciones escalables y modulares.
+* TypeScript: Lenguaje de programación que agrega tipado estático opcional a JavaScript.
+
+
+Requisitos Previos
+Asegúrate de tener instalados los siguientes requisitos antes de ejecutar la aplicación:
+
+
+
+
+
+
+## Pasos de Instalacion Local
+
+## Clona el repositorio en tu máquina local:
+```bash
+git clone git@github.com:josmel/challenge-lucky.git
+```
+## Navega hasta el directorio del proyecto::
+```bash
+cd challenge-lucky
+```
+## Installation
 ```bash
 $ npm install
 ```
@@ -57,6 +82,42 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+# Uso con Docker Compose
+El proyecto también puede ejecutarse utilizando Docker Compose, lo que facilita la configuración y la ejecución del entorno de desarrollo.
+
+
+Asegúrate de tener instalado Docker y Docker Compose en tu máquina antes de seguir estos pasos.
+
+1. Clona el repositorio en tu máquina local:
+```bash
+git clone git@github.com:josmel/challenge-lucky.git
+```
+2. Navega hasta el directorio del proyecto::
+```bash
+cd challenge-lucky
+```
+
+3. Abre el archivo docker-compose.yml y verifica la configuración de los servicios.
+
+4. Ejecuta el siguiente comando para levantar los contenedores:
+```bash
+docker-compose up -d
+```
+Esto creará y levantará los contenedores definidos en el archivo docker-compose.yml.
+
+5. Accede a la aplicación en tu navegador en la siguiente URL: http://localhost:3000. Puedes abrir  la documentacion en swagger de las apis en la ruta.
+
+```bash
+http://localhost:3000/api/v1
+```
+
+6. Para detener y eliminar los contenedores, ejecuta el siguiente comando:
+```bash
+docker-compose down
+
+```
+
 
 ## Support
 
