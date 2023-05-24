@@ -1,0 +1,44 @@
+version: '3'
+services:
+  db:
+    image: postgres:14.0
+    environment:
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: your_database_name
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./migrations:/docker-entrypoint-initdb.d
+    networks:
+      - my-network  # Agrega el servicio a la red personalizada
+
+  redis:
+    image: redis:latest
+    ports:
+      - '6379:6379'
+    networks:
+      - my-network  # Agrega el servicio a la red personalizada
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+      - redis
+    ports:
+      - '3000:3000'
+    networks:
+      - my-network  # Agrega el servicio a la red personalizada
+
+  migration:
+    build: .
+    depends_on:
+      - db
+    command: psql -h db -U your_username -d your_database_name -f /docker-entrypoint-initdb.d/create_tables.sql
+    networks:
+      - my-network  # Agrega el servicio a la red personalizada
+
+networks:
+  my-network:  # Define la red personalizada
